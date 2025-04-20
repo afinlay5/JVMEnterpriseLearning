@@ -7,7 +7,7 @@ plugins {
     id("org.springframework.boot") version "3.4.4"
 }
 
-group = "com.nimdec"
+group = "com.nimdec.api"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -32,7 +32,7 @@ java {
 }
 
 application {
-    mainClass = "com.nimdec.RESTApi"
+    mainClass = "com.nimdec.api.RESTApi"
 }
 
 tasks.named<Test>("test") {
