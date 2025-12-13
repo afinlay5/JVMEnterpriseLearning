@@ -77,7 +77,6 @@ public final class UUIDUtil {
         }
     }
 
-
     private static String generateUUID(String jsonSequence) {
 
         try {

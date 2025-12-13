@@ -11,8 +11,8 @@ public final class SMS {
     // adf5152 google account
 
     // Find your Account Sid and Token at console.twilio.com
-    public static final String ACCOUNT_SID = "AC2a50e10ee8ca94234f76d783cf9d7afa";
-    public static final String AUTH_TOKEN = "07533db7366e8fcf04f9ae77d89789f6";
+    public static final String ACCOUNT_SID = "banana";
+    public static final String AUTH_TOKEN = "monkey";
 
     private static final PhoneNumber fromNumber = new PhoneNumber("+19543200764");
 //    private static final PhoneNumber fromNumber = new PhoneNumber("+18777804236");
