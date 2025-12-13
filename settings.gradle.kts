@@ -5,3 +5,5 @@ plugins {
 
 rootProject.name = "JVMEnterpriseLearning"
 include("rest-api")
+include("sms")
+include("JSONUtil")

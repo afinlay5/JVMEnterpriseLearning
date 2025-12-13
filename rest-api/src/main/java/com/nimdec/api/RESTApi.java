@@ -10,7 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RESTApi {
 
     public static void main(String[] args) {
-        SpringApplication.run(RESTApi.class, args);
+        var appContext = SpringApplication.run(RESTApi.class, args);
+        System.out.println();
     }
 
 }
