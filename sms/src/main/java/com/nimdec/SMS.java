@@ -11,8 +11,8 @@ public final class SMS {
     // adf5152 google account
 
     // Find your Account Sid and Token at console.twilio.com
-    public static final String ACCOUNT_SID = "banana";
-    public static final String AUTH_TOKEN = "monkey";
+//    public static final String ACCOUNT_SID = "banana";
+//    public static final String AUTH_TOKEN = "monkey";
 
     private static final PhoneNumber fromNumber = new PhoneNumber("+19543200764");
 //    private static final PhoneNumber fromNumber = new PhoneNumber("+18777804236");
@@ -28,7 +28,7 @@ public final class SMS {
     public static void main(String[] args) {
 
         try {
-            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+//            Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
             // to then from
             var message = Message.creator(toNumber, fromNumber, textMessageBody)
                     .create();
