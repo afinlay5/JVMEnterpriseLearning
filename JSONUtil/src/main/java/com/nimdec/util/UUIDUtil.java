@@ -51,12 +51,12 @@ public final class UUIDUtil {
 
         var uuid = jsonDocument.get("uuid");
 
-        if (null == uuid) {
+//        if (null == uuid) {
             var item = (Map<String, Object>)(jsonDocument.get("item"));
             var jsonSequence = generateItemsJsonSequence(item);
             jsonDocument.put("uuid", generateUUID(jsonSequence));
             jsonDocument.put("last_updated", easternTimeNow());
-        }
+//        }
     }
 
     private static String easternTimeNow() {
@@ -66,14 +66,14 @@ public final class UUIDUtil {
                 .format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX"));
     }
 
-    private static <T> T readJsonFileAsObject(Path jsonPath) {
+    public static <T> T readJsonFileAsObject(Path jsonPath) {
 
         try {
             return new ObjectMapper()
                     .readValue(jsonPath.toFile(), new TypeReference<>() {});
 
         } catch (IOException ioException) {
-            throw new UncheckedIOException(ioException);
+            throw new UncheckedIOException("For path: %s".formatted(jsonPath), ioException);
         }
     }
 
@@ -142,7 +142,7 @@ public final class UUIDUtil {
         return sb.toString();
     }
 
-    private static <T> void writeJsonObjectToFile(Path jsonPath, T jsonDocument) {
+    public static <T> void writeJsonObjectToFile(Path jsonPath, T jsonDocument) {
         var gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .disableHtmlEscaping()
